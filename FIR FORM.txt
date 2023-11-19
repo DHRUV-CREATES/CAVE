@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIR Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FIR Form</h1>
+    <form action="/submit_fir" method="post">
+        <fieldset>
+            <legend>Complainant's Details</legend>
+            <label for="complainantName">Name:</label>
+            <input type="text" id="complainantName" name="complainantName" required>
+
+            <label for="complainantAddress">Address:</label>
+            <textarea id="complainantAddress" name="complainantAddress" required></textarea>
+
+            <label for="complainantContact">Contact Number:</label>
+            <input type="tel" id="complainantContact" name="complainantContact" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Incident Details</legend>
+            <label for="incidentDate">Date of Incident:</label>
+            <input type="date" id="incidentDate" name="incidentDate" required>
+
+            <label for="incidentTime">Time of Incident:</label>
+            <input type="time" id="incidentTime" name="incidentTime" required>
+
+            <label for="incidentLocation">Location of Incident:</label>
+            <textarea id="incidentLocation" name="incidentLocation" required></textarea>
+
+            <label for="incidentDescription">Description of Incident:</label>
+            <textarea id="incidentDescription" name="incidentDescription" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Accused Details</legend>
+            <label for="accusedName">Name of Accused (if known):</label>
+            <input type="text" id="accusedName" name="accusedName">
+
+            <label for="accusedAddress">Address of Accused (if known):</label>
+            <textarea id="accusedAddress" name="accusedAddress"></textarea>
+        </fieldset>
+
+        <button type="submit">Submit FIR</button>
+    </form>
+</body>
+</html>
